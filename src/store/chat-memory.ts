@@ -1,4 +1,5 @@
 import { BaseMessage } from "@langchain/core/messages";
+import logger from "../logger/logger.js";
 
 // stores the list of messages for each conversationId
 const conversations = new Map<string, BaseMessage[]>(); // map
@@ -18,5 +19,7 @@ export function saveMessage(
 }
 
 export function printConversation(conversationId: string) {
-  console.log(conversations.get(conversationId));
+  logger.info(
+    `Conversation: ${JSON.stringify(conversations.get(conversationId), null, 2)}`,
+  );
 }
