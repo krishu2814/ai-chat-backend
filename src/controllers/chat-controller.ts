@@ -9,6 +9,6 @@ export async function Chat(req: Request, res: Response, next: NextFunction) {
       message: response,
     });
   } catch (error) {
-    next(error);
+    next(error); // Global Error Handler -> errorHandler
   }
 }
