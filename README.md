@@ -34,5 +34,3 @@ src/
 │── app.ts
 └── server.ts
 ```
-
-🚧 Currently under development.
